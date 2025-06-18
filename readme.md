@@ -7,16 +7,24 @@ A modern, interactive front-end web application combining a countdown timer with
 ## 🌐 Live Demo
 
 **[🔗 View Live Project](#)**
-*(Replace with your deployed URL: Vercel, GitHub Pages, Netlify, etc.)*
+*(https://project-8-make-coundown-quotes-usin-zeta.vercel.app/)*
 
 ---
 🖼️ Screenshots
 **Desktop View** 
-* Coundown Timer & Quote Display :
+* Coundown Timer & Quote Display : 
+![Screenshot 2025-06-19 031803](https://github.com/user-attachments/assets/542d2861-345f-4c55-af10-ac6519c623ef)
 
 * Sign-in Page using validation :
-* images Coundown page with quote display :
+![Screenshot 2025-06-18 205958](https://github.com/user-attachments/assets/3a529cc7-bc16-4873-ad70-bdd85a35ba30)
+![Screenshot 2025-06-18 210036](https://github.com/user-attachments/assets/784c0402-9222-405b-abe6-57a912e7961f)
 
+* images Coundown page with quote display :
+![Screenshot 2025-06-19 031645](https://github.com/user-attachments/assets/ab484dd8-92e5-4fdf-86d6-7f65c827f984)
+![Screenshot 2025-06-19 032242](https://github.com/user-attachments/assets/80fd6254-f2a5-451f-ba99-a2c420c86688)
+
+* Footer :
+![Screenshot 2025-06-19 032320](https://github.com/user-attachments/assets/c65004b0-1e91-43c5-940f-8c0c0e1bd2e7)
 
 ---
 
