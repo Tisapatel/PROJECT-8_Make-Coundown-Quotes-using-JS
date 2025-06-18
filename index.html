@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arcane Cards</title>
+  <link rel="shortcut icon" href="./images/favlogo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #0f0f1f, #000000);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background-color: #111;
+      padding: 0px 20px;
+    }
+
+    .navbar-brand img {
+      height: 100px;
+      margin-right: 10px;
+      object-fit: contain;
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .btn-signin {
+      background-color: #2d2d2d;
+      border: none;
+      color: white;
+      padding: 5px 20px;
+      border-radius: 10px;
+    }
+
+    .card-custom {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px 60px;
+      border-radius: 20px;
+      max-width: 1180px;
+      margin: 60px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 20px #0ff;
+      height: 400px;
+    }
+
+    .text-section {
+      width: 48%;
+    }
+
+    .text-section h6 {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .text-section h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    .text-section p {
+      font-size: 1.2rem;
+    }
+
+    .image-section {
+      width: 48%;
+      height: 100%;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .quote-img {
+      height: 350px;
+      object-fit: cover;
+      transition: filter 0.3s ease;
+    }
+
+    .footer {
+      background-color: #0a0a0a;
+      color: white;
+      text-align: center;
+      padding: 40px 20px 20px;
+      margin-top: 50px;
+    }
+
+    .social-icons {
+      margin-bottom: 30px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+      background-color: #1b1b1b;
+      padding: 12px;
+      border-radius: 12px;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background-color: #333;
+    }
+
+    .riot-logo {
+      margin: 10px 0;
+    }
+
+    .riot-logo img {
+      width: 300px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #aaa;
+      max-width: 700px;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand d-flex align-items-center text-white" href="#">
+      <img src="./images/logo.png" alt="Riot Logo">
+    </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-4"style="gap:20px;">
+        <li class="nav-item"><a class="nav-link" href="#">NEWS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">AVATAR CREATOR</a></li>
+      </ul>
+    </div>
+    <div class="ms-auto d-flex align-items-center gap-2">
+      <span style="font-size: 20px;">🌐</span>
+      <button class="btn-signin">SIGN IN</button>
+    </div>
+  </nav>
+
+  <!-- Timer display -->
+  <div class="text-center mt-3">
+    <span style="font-size: 1.2rem; color: #0ff;">Next Quotes change in: <span id="countdown">10</span> sec</span>
+  </div>
+
+  <!-- Main Slider -->
+  <div class="card-custom container">
+    <div class="text-section">
+      <h6>ARCANE SEASON 2 SYNOPSIS</h6>
+      <h1>WATCH IT ALL <br>BURN</h1>
+      <p>Jinx’s attack on the Council sets the stage for a dire escalation of the conflict between Piltover and Zaun.
+      </p>
+    </div>
+    <div class="image-section">
+      <img id="slider-image" src="./images/img-1.avif" class="card-img" />
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="container mt-5 mb-5">
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card bg-dark text-white border-0 h-100 quote-card">
+          <img id="quote-img-1" src="images/item-1.jpg" class="card-img-top quote-img" />
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card bg-dark text-white border-0 h-100 quote-card">
+          <img id="quote-img-2" src="images/item-2.jpg" class="card-img-top quote-img" />
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card bg-dark text-white border-0 h-100 quote-card">
+          <img id="quote-img-3" src="images/item-3.jpg" class="card-img-top quote-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fas fa-times"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-spotify"></i></a>
+      <a href="#"><i class="fas fa-music"></i></a>
+      <a href="#"><i class="fas fa-sliders-h"></i></a>
+    </div>
+
+    <div class="riot-logo">
+      <img src="./images/logo.png" alt="Riot Games Logo">
+    </div>
+
+    <div class="footer-text">
+      © 2021-2024 Riot Games, Inc. ARCANE LEAGUE OF LEGENDS and any associated logos are trademarks, service marks,
+      and/or registered trademarks of Riot Games, Inc.
+    </div>
+
+    <div class="footer-links">
+      <a href="#">PRIVACY NOTICE</a>
+      <a href="#">TERMS OF SERVICE</a>
+      <a href="#">COOKIE POLICY</a>
+      <a href="#">COOKIE PREFERENCES</a>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+
+    $(".btn-signin").on("click", function () {
+      window.location.href = "signin.html"; // redirect to signup page
+    });
+
+    // Main image slider
+    const mainImages = ["images/img-1.avif", "images/img-2.jpg", "images/img-3.avif", "images/img-9.jpg", "images/img-7.jpg", "images/img-8.jpg", "images/img-6.jpg", "images/img-9.jpg", "images/img-4.jpg"];
+    let mainIndex = 0;
+    let mainCountdown = 10;
+
+    // Card images
+    const card1Images = ["images/item-8.jpg", "images/item-2.jpg", "images/item-3.jpg", "images/item-4.jpg", "images/item-5.jpg"];
+    const card2Images = ["images/item-1.jpg", "images/item-3.jpg", "images/item-4.jpg", "images/item-5.jpg", "images/item-6.jpg"];
+    const card3Images = ["images/item-2.jpg", "images/item-4.jpg", "images/item-5.jpg", "images/item-6.jpg", "images/item-7.jpg"];
+    let c1 = 0, c2 = 0, c3 = 0;
+
+    // Update countdown & main slider every 1 sec
+    setInterval(() => {
+      mainCountdown--;
+      if (mainCountdown <= 0) {
+        mainCountdown = 10;
+        mainIndex = (mainIndex + 1) % mainImages.length;
+        $("#slider-image").fadeOut(300, function () {
+          $(this).attr("src", mainImages[mainIndex]).fadeIn(300);
+        });
+      }
+      $("#countdown").text(mainCountdown);
+    }, 1000);
+
+    // Change quote card images every 5 seconds
+    setInterval(() => {
+      c1 = (c1 + 1) % card1Images.length;
+      c2 = (c2 + 1) % card2Images.length;
+      c3 = (c3 + 1) % card3Images.length;
+
+      $("#quote-img-1").fadeOut(300, function () {
+        $(this).attr("src", card1Images[c1]).fadeIn(300);
+      });
+      $("#quote-img-2").fadeOut(300, function () {
+        $(this).attr("src", card2Images[c2]).fadeIn(300);
+      });
+      $("#quote-img-3").fadeOut(300, function () {
+        $(this).attr("src", card3Images[c3]).fadeIn(300);
+      });
+    }, 5000);
+
+  </script>
+</body>
+
+</html>
